@@ -1,8 +1,8 @@
 function requestOfServer(){
 
     $.ajax({
-        type: 'get',
-        url:"http://localhost:8000/hello-world?info=oi"
+        type: 'post',
+        url:"http://localhost:8000/routenew?info=oi"
     }).done(function(data){
         console.log(data);
         document.getElementById('developer').innerHTML = data.name
