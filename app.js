@@ -20,6 +20,26 @@ function submitDataOfUser(){
     const lastNameOfUser = $("#lastname").val()
     const ageOfUser =$("#age").val()
 
+    $.ajax({
+        "url": "http:/localhost:8000/insert-data",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+            "content-Type": "application/json; charset=UTF-8"
+        },
+        
+        "data": JSON.stringify({
+            name: nameOfUser,
+            lastName: lastNameOfUser,
+            age:ageOfUser
+        })
+    }).done(function (response){
+            if(response.sucess){
+                 alert('Deu boa :)!')
+            }
+     });
+    
+
     console.log(nameOfUser)
     console.log(lastNameOfUser)
     console.log(ageOfUser)
