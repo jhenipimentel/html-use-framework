@@ -25,7 +25,7 @@ function submitDataOfUser(){
         "method": "POST",
         "timeout": 0,
         "headers": {
-            "content-Type": "application/json; charset=UTF-8"
+            "Content-Type": "application/JSON; charset=UTF-8"
         },
         
         "data": JSON.stringify({
@@ -34,13 +34,14 @@ function submitDataOfUser(){
             age:ageOfUser
         })
     }).done(function (response){
-            if(response.sucess){
-                 alert('Deu boa :)!')
+            if(response.success){
+                 $("#success-record-msg").css('display','block')
             }
      });
     
 
-    console.log(nameOfUser)
-    console.log(lastNameOfUser)
-    console.log(ageOfUser)
+}
+
+function closeSuccessMsg(){
+    alert ('msg fechou')
 }

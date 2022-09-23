@@ -47,7 +47,7 @@ button{
     width: 90px;
 }
 
-.sucess-record{
+.success-record{
     padding: 5px;
     text-align: center;
     width: 350px;
@@ -56,4 +56,10 @@ button{
     border-radius: 10px;
     color: rgb(0, 83, 131);
     background-color: #bed6e5;
+}
+.success-record > div > svg{
+    display: inline-block;
+    top:2px;
+    left:2px;
+    cursor: pointer;
 }
