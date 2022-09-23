@@ -36,6 +36,11 @@ function submitDataOfUser(){
     }).done(function (response){
             if(response.success){
                  $("#success-record-msg").css('display','block')
+
+                 $("#name").val('')
+                 $("#lastname").val('')
+                 $("#age").val('')
+
             }
      });
     
